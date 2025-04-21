@@ -1,0 +1,40 @@
+{
+  "name": "@liuxb001/master-tab-coordinator",
+  "version": "1.0.0",
+  "description": "MasterTabCoordinator：用于多标签页间通信与协调的TypeScript库",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/MasterTabCoordinator.js",
+  "types": "dist/MasterTabCoordinator.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "typescript",
+    "tab",
+    "coordinator",
+    "multi-tab",
+    "communication",
+    "master-tab",
+    "browser"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "prettier": "^3.0.1",
+    "typescript": "^5.8.3"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
